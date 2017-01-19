@@ -1,0 +1,11 @@
+
+ROOT of p0sweb
+contains:
+
+repo <p0sweb>
+|-zk - z00keeper config
+|-web - web components
+|-bundles - osgi projects
+|-docker - docker contexts
+--cache - caching
+
