@@ -7,7 +7,7 @@ ARG JAVA_VERSION=1.8.0_121
 ARG JDK_VERSION=jdk${JAVA_VERSION}
 
 # Udate wget to support SSL
-ADD server-jre-${JAVA_TOKEN}-linux-x64.tar.gz /opt
+ADD server-jre-${JAVA_TOKEN}-linux-x64.tar.bz2 /opt
 #ADD jre.tar.gz /opt
 
 # Get and install Java
