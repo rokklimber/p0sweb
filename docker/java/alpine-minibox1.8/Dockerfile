@@ -8,9 +8,10 @@ ARG JDK_VERSION=jdk${JAVA_VERSION}
 
 # add bzip2 pkg
 #RUN opkg-install bzip2
+RUN apk add --no-cache bzip2
 
 # Udate wget to support SSL
-ADD server-jre-${JAVA_TOKEN}-linux-x64.tar.gz /opt
+ADD server-jre-${JAVA_TOKEN}-linux-x64.tar.bz2 /opt
 RUN chown -R root:root /opt
 #ADD jre.tar.gz /opt
 
@@ -32,7 +33,6 @@ RUN apk add --update wget ca-certificates && \
 
 # Get and install Java
 #RUN ln -s /opt/${JDK_VERSION}/bin/java /usr/bin/java
-RUN apk add --no-cache bzip2
 #RUN apk add --no-cache strace
 #RUN apk add --allow-untrusted glibc-2.21-r2.apk
 RUN ls -l /bin /usr/bin /opt /opt/${JDK_VERSION}/bin
